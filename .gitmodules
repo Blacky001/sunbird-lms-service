@@ -1,0 +1,3 @@
+[submodule "actors/sunbird-lms-mw"]
+	path = actors/sunbird-lms-mw
+	url = https://github.com/Blacky001/sunbird-lms-mw.git
