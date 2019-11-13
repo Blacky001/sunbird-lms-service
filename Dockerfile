@@ -11,10 +11,10 @@ RUN chown -R sunbird:sunbird /home/sunbird
 USER sunbird
 ENV HTTP_PROXY "http://172.22.218.218:8085"
 ENV HTTPS_PROXY "http://172.22.218.218:8085"
-ENV NO_PROXY "*.mindtree.com,*.cloudapp.azure.com,172.22.*.*,172.23.*.*"
+ENV NO_PROXY "localhost,igx.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134,172.22.219.135"
 ENV http_proxy "http://172.22.218.218:8085"
 ENV https_proxy "http://172.22.218.218:8085"
-ENV no_proxy "*.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134"
+ENV no_proxy "igx.mindtree.com,172.22.219.125,172.22.219.126,172.22.219.127,172.22.219.128,172.22.219.129,172.22.219.130,172.22.219.131,172.22.219.132,172.22.219.133,172.22.219.134,localhost,172.22.219.135,github.com"
 COPY ./service/target/learning-service-1.0-SNAPSHOT-dist.zip /home/sunbird/learner/
 RUN unzip /home/sunbird/learner/learning-service-1.0-SNAPSHOT-dist.zip -d /home/sunbird/learner/
 WORKDIR /home/sunbird/learner/
